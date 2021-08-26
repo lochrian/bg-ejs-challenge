@@ -12,7 +12,9 @@ This is the home page
 
   <% newPosts.forEach(function(post) { %>
     <h1> <%= post.title %> </h1>
-    <p> <%= post.content %> </p>
+    <p> <%= _.truncate(post.content, {'length': 100})  %>
+    <a href="post/<%= post.title%>">more...</a>
+    </p>
     <% }); %>
 
 
